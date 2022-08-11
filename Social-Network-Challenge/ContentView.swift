@@ -9,45 +9,28 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State private var users = [User]()
+    
+    @ObservedObject private var viewModel = ViewModel() // ObservedObject
         
     var body: some View {
         
         NavigationView{
-            List(users, id: \.id) { users in
+            List(viewModel.posts, id: \.id) { posts in
                 VStack(alignment: .leading){
-                    Text(users.name)
+                    Image(posts.)
+                    Text(posts.content)
                         .font(.headline)
-                    Text(users.email)
-                    font(.body)
+                    Text(posts.created_at)
+                        .font(.body)
                 }
             }
             .navigationTitle("Cadastrados")
             .task {
-                await getUsers()
+                await viewModel.getPosts()
             }
         }
     }
-    
-    func getUsers() async {
-        //criando url
-        guard let url = URL(string: "http://adaspace.local/users") else
-        {
-            print("Nao ta funcionando")
-            return
-        }
-        //buscando dados da url em questao
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            
-            //decode that data
-            if let decodeResponde = try?JSONDecoder().decode([User].self, from: data) {
-                users = decodeResponde
-            }
-        } catch {
-            print("this data isn't valid")
-        }
-    }
+
 }
 
 struct ContentView_Previews: PreviewProvider {

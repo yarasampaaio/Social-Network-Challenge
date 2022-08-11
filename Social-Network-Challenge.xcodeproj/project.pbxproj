@@ -15,6 +15,10 @@
 		B99F4C9928A3DAFE00076A02 /* Social_Network_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F4C9828A3DAFE00076A02 /* Social_Network_ChallengeUITests.swift */; };
 		B99F4C9B28A3DAFE00076A02 /* Social_Network_ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F4C9A28A3DAFE00076A02 /* Social_Network_ChallengeUITestsLaunchTests.swift */; };
 		B9B108AC28A52836000C468A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108AB28A52836000C468A /* UserModel.swift */; };
+		B9B108AE28A529FF000C468A /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108AD28A529FF000C468A /* PostService.swift */; };
+		B9B108B028A52B41000C468A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108AF28A52B41000C468A /* PostModel.swift */; };
+		B9B108B228A52CCD000C468A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B128A52CCD000C468A /* UserService.swift */; };
+		B9B108B428A52EC3000C468A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B328A52EC3000C468A /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		B99F4C9828A3DAFE00076A02 /* Social_Network_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_Network_ChallengeUITests.swift; sourceTree = "<group>"; };
 		B99F4C9A28A3DAFE00076A02 /* Social_Network_ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_Network_ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B9B108AB28A52836000C468A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B9B108AD28A529FF000C468A /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		B9B108AF28A52B41000C468A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		B9B108B128A52CCD000C468A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		B9B108B328A52EC3000C468A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B9B108AB28A52836000C468A /* UserModel.swift */,
+				B9B108AF28A52B41000C468A /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +160,7 @@
 		B9B108A828A527CE000C468A /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				B9B108B328A52EC3000C468A /* ViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -158,6 +168,8 @@
 		B9B108A928A527D8000C468A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				B9B108AD28A529FF000C468A /* PostService.swift */,
+				B9B108B128A52CCD000C468A /* UserService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -293,8 +305,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B99F4C8028A3DAFD00076A02 /* ContentView.swift in Sources */,
+				B9B108B028A52B41000C468A /* PostModel.swift in Sources */,
+				B9B108B228A52CCD000C468A /* UserService.swift in Sources */,
 				B9B108AC28A52836000C468A /* UserModel.swift in Sources */,
 				B99F4C7E28A3DAFD00076A02 /* Social_Network_ChallengeApp.swift in Sources */,
+				B9B108AE28A529FF000C468A /* PostService.swift in Sources */,
+				B9B108B428A52EC3000C468A /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
