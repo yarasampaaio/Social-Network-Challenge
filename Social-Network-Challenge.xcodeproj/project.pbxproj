@@ -19,6 +19,16 @@
 		B9B108B028A52B41000C468A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108AF28A52B41000C468A /* PostModel.swift */; };
 		B9B108B228A52CCD000C468A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B128A52CCD000C468A /* UserService.swift */; };
 		B9B108B428A52EC3000C468A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B328A52EC3000C468A /* ViewModel.swift */; };
+		FE84E28728A5BE10007114C0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84E28628A5BE10007114C0 /* ProfileView.swift */; };
+		FE84E28C28A5DC42007114C0 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84E28B28A5DC42007114C0 /* NameView.swift */; };
+		FE84E28E28A5DC5D007114C0 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84E28D28A5DC5D007114C0 /* EmailView.swift */; };
+		FE84E29428A5F8C2007114C0 /* ItemNavigationListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84E29328A5F8C2007114C0 /* ItemNavigationListComponent.swift */; };
+		FE84E29828A60714007114C0 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84E29728A60714007114C0 /* FeedView.swift */; };
+		FE84E29A28A608C1007114C0 /* SizesComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84E29928A608C1007114C0 /* SizesComponent.swift */; };
+		FE84E29C28A620AD007114C0 /* PostsComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84E29B28A620AD007114C0 /* PostsComponents.swift */; };
+		FE84E29E28A6235E007114C0 /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84E29D28A6235E007114C0 /* AddPostView.swift */; };
+		FE84E2A028A63B84007114C0 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE84E29F28A63B84007114C0 /* ImagePicker.swift */; };
+		FEAB5C4C28A647AF002DCB3D /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB5C4B28A647AF002DCB3D /* ExploreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +64,16 @@
 		B9B108AF28A52B41000C468A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		B9B108B128A52CCD000C468A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B9B108B328A52EC3000C468A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		FE84E28628A5BE10007114C0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = "Social-Network-Challenge/View/Profile/ProfileView.swift"; sourceTree = SOURCE_ROOT; };
+		FE84E28B28A5DC42007114C0 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		FE84E28D28A5DC5D007114C0 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		FE84E29328A5F8C2007114C0 /* ItemNavigationListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNavigationListComponent.swift; sourceTree = "<group>"; };
+		FE84E29728A60714007114C0 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		FE84E29928A608C1007114C0 /* SizesComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizesComponent.swift; sourceTree = "<group>"; };
+		FE84E29B28A620AD007114C0 /* PostsComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsComponents.swift; sourceTree = "<group>"; };
+		FE84E29D28A6235E007114C0 /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
+		FE84E29F28A63B84007114C0 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		FEAB5C4B28A647AF002DCB3D /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +128,7 @@
 				B9B108A728A527B4000C468A /* View */,
 				B9B108A828A527CE000C468A /* View Model */,
 				B9B108A928A527D8000C468A /* Service */,
+				FE84E29528A5FA14007114C0 /* Components */,
 				B99F4C7D28A3DAFD00076A02 /* Social_Network_ChallengeApp.swift */,
 				B99F4C7F28A3DAFD00076A02 /* ContentView.swift */,
 				B99F4C8128A3DAFE00076A02 /* Assets.xcassets */,
@@ -153,6 +174,8 @@
 		B9B108A728A527B4000C468A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE84E29628A606FB007114C0 /* Explore */,
+				FE84E28828A5DBDE007114C0 /* Profile */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -172,6 +195,37 @@
 				B9B108B128A52CCD000C468A /* UserService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		FE84E28828A5DBDE007114C0 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FE84E28628A5BE10007114C0 /* ProfileView.swift */,
+				FE84E28B28A5DC42007114C0 /* NameView.swift */,
+				FE84E28D28A5DC5D007114C0 /* EmailView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FE84E29528A5FA14007114C0 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE84E29328A5F8C2007114C0 /* ItemNavigationListComponent.swift */,
+				FE84E29928A608C1007114C0 /* SizesComponent.swift */,
+				FE84E29B28A620AD007114C0 /* PostsComponents.swift */,
+				FE84E29F28A63B84007114C0 /* ImagePicker.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FE84E29628A606FB007114C0 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				FE84E29728A60714007114C0 /* FeedView.swift */,
+				FEAB5C4B28A647AF002DCB3D /* ExploreView.swift */,
+				FE84E29D28A6235E007114C0 /* AddPostView.swift */,
+			);
+			path = Explore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,13 +358,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE84E28728A5BE10007114C0 /* ProfileView.swift in Sources */,
 				B99F4C8028A3DAFD00076A02 /* ContentView.swift in Sources */,
+				FE84E28C28A5DC42007114C0 /* NameView.swift in Sources */,
+				FE84E29428A5F8C2007114C0 /* ItemNavigationListComponent.swift in Sources */,
+				FE84E29E28A6235E007114C0 /* AddPostView.swift in Sources */,
 				B9B108B028A52B41000C468A /* PostModel.swift in Sources */,
 				B9B108B228A52CCD000C468A /* UserService.swift in Sources */,
 				B9B108AC28A52836000C468A /* UserModel.swift in Sources */,
 				B99F4C7E28A3DAFD00076A02 /* Social_Network_ChallengeApp.swift in Sources */,
 				B9B108AE28A529FF000C468A /* PostService.swift in Sources */,
+				FE84E29C28A620AD007114C0 /* PostsComponents.swift in Sources */,
+				FE84E29A28A608C1007114C0 /* SizesComponent.swift in Sources */,
+				FEAB5C4C28A647AF002DCB3D /* ExploreView.swift in Sources */,
 				B9B108B428A52EC3000C468A /* ViewModel.swift in Sources */,
+				FE84E2A028A63B84007114C0 /* ImagePicker.swift in Sources */,
+				FE84E29828A60714007114C0 /* FeedView.swift in Sources */,
+				FE84E28E28A5DC5D007114C0 /* EmailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,11 +535,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Social-Network-Challenge/Preview Content\"";
+				DEVELOPMENT_TEAM = DVX5N2U74F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need to access the camera for taking photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -487,7 +554,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -499,11 +566,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Social-Network-Challenge/Preview Content\"";
+				DEVELOPMENT_TEAM = DVX5N2U74F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Need to access the camera for taking photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -515,7 +585,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

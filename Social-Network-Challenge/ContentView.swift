@@ -15,12 +15,11 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView{
-            List(viewModel.posts, id: \.id) { posts in
+            List(viewModel.users, id: \.id) { user in
                 VStack(alignment: .leading){
-                    Image(posts.)
-                    Text(posts.content)
+                    Text(user.name)
                         .font(.headline)
-                    Text(posts.created_at)
+                    Text(user.email)
                         .font(.body)
                 }
             }
