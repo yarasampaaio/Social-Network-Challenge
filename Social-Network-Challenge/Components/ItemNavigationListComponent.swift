@@ -12,14 +12,14 @@ struct ItemNavigationListComponent{
     let systemName: String
     let title: String
     
-    static func buildItem(itemProfile: ItemNavigationListComponent) -> some View{
+    static func buildItem(_ item: ItemNavigationListComponent) -> some View{
         
-        return NavigationLink{itemProfile.route}
+        return NavigationLink{item.route}
             label:{
                 HStack{
-                    Image(systemName: itemProfile.systemName)
+                    Image(systemName: item.systemName)
                         .foregroundColor(Color.accentColor)
-                    Text(itemProfile.title)
+                    Text(item.title)
                 }
             }
     }

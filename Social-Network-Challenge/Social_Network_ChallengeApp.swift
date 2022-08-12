@@ -16,13 +16,13 @@ struct Social_Network_ChallengeApp: App {
                     .tabItem {
                         Label("Explorar", systemImage: "safari.fill")
                     }
-                
+
                 ProfileView()
                     .tabItem {
                         Label("Perfil", systemImage: "person.fill")
                     }
             }
-            
+            //ExploreView()
         }
     }
 }

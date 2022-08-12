@@ -11,7 +11,7 @@ struct AddPostView: View {
     @State var txt: String = ""
     
     @State private var isShowPhotoLibrary = false
-    @State private var image = UIImage()
+    @State private var image = UIImage(named:"Galeria")!
     
     @Environment(\.dismiss) var dismiss
     
@@ -61,7 +61,7 @@ struct AddPostView: View {
                 )
             
             Button(action: {
-                self.isShowPhotoLibrary = true
+                self.isShowPhotoLibrary.toggle()
             }) {
                 HStack {
                     Image(systemName: "photo")

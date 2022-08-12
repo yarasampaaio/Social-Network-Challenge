@@ -8,30 +8,54 @@
 import SwiftUI
 
 struct ProfileView: View{
-    
+    @State private var isShowPhotoLibrary = false
+    @State private var image = UIImage(named: "Perfil")!
+
     var body: some View{
-        NavigationView{
+        NavigationView {
             VStack(spacing: 20){
-                Circle()
-                    .fill(Color.accentColor)
-                    .frame(
-                        width: SizesComponents.widthScreen*0.6,
-                        height: SizesComponents.widthScreen*0.6
-                    )
-                Spacer()
-                List {
-                    Section(header: Text("Dados Pessoais"),
-                            content: {
+                    
+                    avatarProfile
+                    
+                    List {
                         
-                        ItemNavigationListComponent.buildItem(itemProfile: ItensProfile.name)
+                        ItemNavigationListComponent.buildItem(ItensProfile.myPosts)
+                        ItemNavigationListComponent.buildItem(ItensProfile.myFriends)
                         
-                        ItemNavigationListComponent.buildItem(itemProfile: ItensProfile.email)
-                    }
-                    )
-                }.listStyle(.insetGrouped)
+                        Section(header: Text("Meus Dados"),
+                                content: {
+                            
+                            ItemNavigationListComponent.buildItem( ItensProfile.name)
+                            
+                            ItemNavigationListComponent.buildItem( ItensProfile.email)
+                            
+                            ItemNavigationListComponent.buildItem(ItensProfile.password)
+                        
+                        }
+                                
+                        )
+                        
+                    }.listStyle(.insetGrouped)
             }.navigationTitle("Perfil")
+        }
             
-        }.ignoresSafeArea()
+    }
+    
+    var avatarProfile: some View{
+        Button(action: {
+            self.isShowPhotoLibrary.toggle()
+        }){
+            Image(uiImage: self.image)
+                .resizable()
+                .frame(
+                    width: SizesComponents.widthScreen*0.6,
+                    height: SizesComponents.widthScreen*0.6
+                )
+                .cornerRadius(1000)
+        }.sheet(isPresented: $isShowPhotoLibrary) {
+            ImagePickerComponent(sourceType: .photoLibrary, selectedImage: self.$image)
+        }
+        
     }
     
     
@@ -49,6 +73,24 @@ private struct ItensProfile{
         route: AnyView(EmailView()),
         systemName: "person.crop.square.filled.and.at.rectangle.fill",
         title: "E-mail"
+    )
+    
+    static let password: ItemNavigationListComponent = ItemNavigationListComponent(
+        route: AnyView(PasswordView()),
+        systemName: "person.badge.key.fill",
+        title: "Senha"
+    )
+    
+    static let myPosts: ItemNavigationListComponent = ItemNavigationListComponent(
+        route: AnyView(MyPostsView()),
+        systemName: "person.crop.rectangle.fill",
+        title: "Meus Posts"
+    )
+    
+    static let myFriends: ItemNavigationListComponent = ItemNavigationListComponent(
+        route: AnyView(FriendsView()),
+        systemName: "person.2.fill",
+        title: "Meus Amigos"
     )
 }
 
