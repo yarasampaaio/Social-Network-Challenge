@@ -10,6 +10,7 @@ import SwiftUI
 struct MyPostsView: View {
     
     @State private var showingActionSheet: Bool = false
+    
     private var actionSheetTitle: String = "Action Sheet Title"
     private var actionSheetMessage: String = ""
     

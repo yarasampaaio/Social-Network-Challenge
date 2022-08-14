@@ -11,18 +11,7 @@ import SwiftUI
 struct Social_Network_ChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            TabView {
-                ExploreView()
-                    .tabItem {
-                        Label("Explorar", systemImage: "safari.fill")
-                    }
-
-                ProfileView()
-                    .tabItem {
-                        Label("Perfil", systemImage: "person.fill")
-                    }
-            }
-            //ExploreView()
+            SplashScreenView()
         }
     }
 }
