@@ -26,10 +26,12 @@ class ViewModel: ObservableObject { //ObservableObject
             let (data, _) = try await URLSession.shared.data(from: url)
             
             //decode that data
-            if let decodeResponde = try?JSONDecoder()
-                .decode([UserModel].self, from: data)
-            {
+            do {
+                let decodeResponde = try JSONDecoder().decode([UserModel].self, from: data)
                 publishUser(users: decodeResponde)
+                
+            } catch {
+                print(error)
             }
         } catch {
             print("this data isn't valid")
@@ -48,10 +50,11 @@ class ViewModel: ObservableObject { //ObservableObject
             let (data, _) = try await URLSession.shared.data(from: url)
 
             //decode that data
-            if let decodeResponde = try? JSONDecoder()
-                .decode([PostModel].self, from: data)
-            {
+            do {
+                let decodeResponde = try JSONDecoder().decode([PostModel].self, from: data)
                 publishPost(posts: decodeResponde)
+            } catch {
+                print(error)
             }
         } catch {
             print("this data isn't valid")

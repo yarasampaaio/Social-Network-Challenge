@@ -8,15 +8,21 @@
 import SwiftUI
 
 struct FriendsView: View {
+    
+    @ObservedObject private var viewModel = ViewModel()
+    
     var body: some View {
         List {
-            ForEach(myFriends, id: \.id) { friend in
-                FriendComponent.builItem(userModel: friend)
+            ForEach(viewModel.users, id: \.id) { user in
+                FriendComponent.builItem(userModel: user)
             }
         }
         .listStyle(.inset)
         .navigationTitle("Meus Amigos")
         .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
+        .task {
+            await viewModel.getUsers()
+        }
     }
 }
 

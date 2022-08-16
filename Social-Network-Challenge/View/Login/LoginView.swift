@@ -9,65 +9,110 @@ import SwiftUI
 import AuthenticationServices
 
 struct LoginView: View {
-    @Environment(\.colorScheme) var colorScheme
     
-    @State var systemScheme = UITraitCollection.current.userInterfaceStyle
+    @State private var isLoggedIn = false
     
-    @State var isLoggedIn = false
+    @State private var name: String = ""
+    @State private var password: String = ""
+    
+    @State private var isSecured = true
+    
+    @State private var showRegister = false
+    
+    @State private var go = false
     
     var body: some View {
-        if isLoggedIn{
+        
+        if go{
             MyTabView()
         }else{
-            VStack {
-                
-                signInWithAppleButton.frame(
-                    width: UIScreen.main.bounds.width*0.6,
-                    height: UIScreen.main.bounds.height*0.06
-                )
+            VStack(spacing: 40){
+                loginAndPass
+                actionButtons
+      
+            }
+            .sheet(isPresented: $showRegister){
+                RegisterView()
             }
             .ignoresSafeArea()
             .navigationTitle("")
             .navigationBarHidden(true)
             .navigationBarBackButtonHidden(true)
         }
+        
+        
+        
     }
     
-    @ViewBuilder
-    var signInWithAppleButton: some View {
-        if colorScheme == .dark {
-            mySignInWithAppleButton
-                .signInWithAppleButtonStyle(.white)
-        } else {
-            mySignInWithAppleButton
-                .signInWithAppleButtonStyle(.black)
-        }
-    }
-    
-    var mySignInWithAppleButton: some View {
-        SignInWithAppleButton(
-            .signIn,
-            onRequest: { request in
-                request.requestedScopes = [.fullName, .email]
-            },
-            onCompletion: { result in
-                switch result {
-                case .success(let auth):
-                    //print("Authorization successful. \(auth.credential.description)")
-                    
-                    guard let credentials = auth.credential as? ASAuthorizationAppleIDCredential, let identityToken = credentials.identityToken, let identityTokenString = String(data: identityToken, encoding: .utf8) else { return }
-                    let body = ["appleIdentityToken": identityTokenString]
-                    guard let jsonData = try? JSONEncoder().encode(body) else { return }
-                    
-                    print(jsonData)
-                    
-                    isLoggedIn.toggle()
-                    
-                case .failure(let error):
-                    print("Authorization failed: " + error.localizedDescription)
+    var loginAndPass: some View{
+        VStack {
+            HStack(alignment: .center) {
+                Text("Nome:")
+                    .font(.callout)
+                    .bold()
+                TextField("Insira seu Nome...", text: $name)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+            }.frame(width: SizesComponents.widthFirst)
+            
+            HStack(alignment: .center) {
+                Text("Senha:")
+                    .font(.callout)
+                    .bold()
+                
+                if isSecured{
+                    SecureField("Insira sua senha...", text: $password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                }else{
+                    TextField("Insira sua senha...", text: $password)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
+                
+                Button(action: {
+                    isSecured.toggle()
+                }) {
+                    Image(systemName: self.isSecured ? "eye.slash" : "eye")
+                        .foregroundColor(.accentColor)
+                }
+                
+            }.frame(width: SizesComponents.widthFirst)
+        }
+
+    }
+    
+    var actionButtons: some View{
+        VStack {
+            
+            Button(action: {
+                self.go.toggle()
+            }) {
+                HStack {
+                    Image(systemName: "person.fill")
+                        .font(.system(size: 20))
+                    
+                    Text("Entrar").foregroundColor(.white).bold().font(.headline)
+                }
+                .frame(
+                    width: SizesComponents.widthSecond,
+                    height: SizesComponents.heightScreen*0.06
+                )
+                .background(Color.accentColor)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .padding(.horizontal)
             }
-        )
+            
+            
+            HStack{
+                Text("ou")
+                Button("Cadastre-se"){
+                    self.showRegister.toggle()
+                }
+                
+            }.frame(
+                width: SizesComponents.widthSecond,
+                alignment: .trailing
+            )
+        }
     }
     
 }
@@ -77,10 +122,3 @@ struct LoginView_Previews: PreviewProvider {
         LoginView()
     }
 }
-
-
-//guard let credentials = auth.credential as? ASAuthorizationAppleIDCredential, let identityToken = credentials.identityToken, let identityTokenString = String(data: identityToken, encoding: .utf8) else { return }
-//let body = ["appleIdentityToken": identityTokenString]
-//guard let jsonData = try? JSONEncoder().encode(body) else { return }
-//
-//print(jsonData)

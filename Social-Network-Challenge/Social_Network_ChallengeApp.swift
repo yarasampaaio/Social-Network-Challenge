@@ -12,6 +12,8 @@ struct Social_Network_ChallengeApp: App {
     var body: some Scene {
         WindowGroup {
             SplashScreenView()
+            //MyTabView()
+            //ContentView()
         }
     }
 }

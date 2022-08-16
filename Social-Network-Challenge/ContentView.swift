@@ -25,7 +25,7 @@ struct ContentView: View {
             }
             .navigationTitle("Cadastrados")
             .task {
-                await viewModel.getPosts()
+                await viewModel.getUsers()
             }
         }
     }

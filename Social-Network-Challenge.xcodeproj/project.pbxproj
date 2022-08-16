@@ -37,6 +37,7 @@
 		FEAB5C5428A6CBFC002DCB3D /* FriendComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB5C5328A6CBFC002DCB3D /* FriendComponent.swift */; };
 		FEAB5C5628A6D443002DCB3D /* MyPostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB5C5528A6D443002DCB3D /* MyPostsView.swift */; };
 		FEAB5C5928A6DDCC002DCB3D /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB5C5828A6DDCC002DCB3D /* PasswordView.swift */; };
+		FEBC7C2F28ABDFA6004479D1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC7C2E28ABDFA6004479D1 /* RegisterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		FEAB5C5328A6CBFC002DCB3D /* FriendComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendComponent.swift; sourceTree = "<group>"; };
 		FEAB5C5528A6D443002DCB3D /* MyPostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPostsView.swift; sourceTree = "<group>"; };
 		FEAB5C5828A6DDCC002DCB3D /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		FEBC7C2E28ABDFA6004479D1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,9 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				FEAB5C4D28A6C1BE002DCB3D /* Explore */,
-				FEAB5C4E28A6C70C002DCB3D /* Friends */,
 				FE0264D028A71549008DB945 /* Login */,
-				FEAB5C5728A6D450002DCB3D /* MyPosts */,
 				FE0264D328A7161D008DB945 /* MyTabView */,
 				FE84E28828A5DBDE007114C0 /* Profile */,
 				FE0264DE28A971E5008DB945 /* SplashScreen */,
@@ -228,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				FE0264D128A7156C008DB945 /* LoginView.swift */,
+				FEBC7C2E28ABDFA6004479D1 /* RegisterView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -251,6 +252,8 @@
 		FE84E28828A5DBDE007114C0 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				FEAB5C4E28A6C70C002DCB3D /* Friends */,
+				FEAB5C5728A6D450002DCB3D /* MyPosts */,
 				FE84E28628A5BE10007114C0 /* ProfileView.swift */,
 				FE84E28B28A5DC42007114C0 /* NameView.swift */,
 				FEAB5C5828A6DDCC002DCB3D /* PasswordView.swift */,
@@ -438,6 +441,7 @@
 				B9B108AC28A52836000C468A /* UserModel.swift in Sources */,
 				B99F4C7E28A3DAFD00076A02 /* Social_Network_ChallengeApp.swift in Sources */,
 				B9B108AE28A529FF000C468A /* PostService.swift in Sources */,
+				FEBC7C2F28ABDFA6004479D1 /* RegisterView.swift in Sources */,
 				FE84E29C28A620AD007114C0 /* PostsComponents.swift in Sources */,
 				FE84E29A28A608C1007114C0 /* SizesComponent.swift in Sources */,
 				FE0264D528A7163A008DB945 /* MyTabView.swift in Sources */,

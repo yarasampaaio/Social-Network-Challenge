@@ -21,7 +21,7 @@ struct ExploreView: View {
                 PostsComponents.addPost()
                 
                 ScrollView(.vertical) {
-                    ForEach(myposts, id: \.id) { post in
+                    ForEach(viewModel.posts, id: \.id) { post in
                         buildPost(post)
                     }
                 }
@@ -33,18 +33,25 @@ struct ExploreView: View {
                 }
         }
         
-        
     }
     
     func buildPost(_ postModel: PostModel)-> some View{
+        
+        let initialURL: String = "http://adaspace.local/"
+        let media: String = postModel.media ?? ""
+        let url = initialURL + media
         
         return VStack{
             GroupBox(label: Text(""),
                      content: {
                 
-                Image("image")
-                    .resizable()
-                    .frame(width: SizesComponents.widthSecond)
+                if !media.isEmpty{
+                    AsyncImage(url: URL(string: url))
+                        .frame(
+                            width: SizesComponents.widthSecond
+                        )
+                }
+                
                 
                 Text("\n \(postModel.content)")
             }
