@@ -7,32 +7,17 @@
 
 import Foundation
 
-class PostsService: ObservableObject {
-    @Published var posts = [PostModel]()
-    
+class PostsService{
     func getAllPosts() async throws -> [PostModel]{
-        
-        //buscando dados da url em questao
         do {
-            let (data, _) = try await URLSession.shared.data(from: URL(string: "http://adaspace.local/posts")!)
-
-            //decode that data
-            if let decodeResponde = try? JSONDecoder()
-                .decode([PostModel].self, from: data)
-            {
-                publishPost(posts: decodeResponde)
-            }
+            let (postRequest, _) = try await URLSession.shared.data(from: URL(string: "http://adaspace.local/posts")!)
+            let jsonResult = try JSONDecoder().decode([PostModel].self, from: postRequest)
+            return jsonResult
+            
         } catch {
-            print("this data isn't valid")
+            print(error)
         }
-        
-        return self.posts
+        return []
     }
-    
-    func publishPost(posts:[PostModel]){
-        DispatchQueue.main.async{
-            self.posts = posts
-            print(posts)
-        }
-    }
+    init(){}
 }

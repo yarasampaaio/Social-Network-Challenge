@@ -12,52 +12,24 @@ class ViewModel: ObservableObject { //ObservableObject
     @Published var users = [UserModel]() // @Published
     @Published var posts = [PostModel]()
     
-    @ObservedObject private var postsService = PostsService()
-
     func getUsers() async {
-        //criando url
-        guard let url = URL(string: "http://adaspace.local/users") else
-        {
-            print("Nao ta funcionando")
-            return
-        }
-        //buscando dados da url em questao
         do {
-            let (data, _) = try await URLSession.shared.data(from: url)
+            let usersJSON = try await UserService().getAllUsers()
+            publishUser(users: usersJSON)
             
-            //decode that data
-            do {
-                let decodeResponde = try JSONDecoder().decode([UserModel].self, from: data)
-                publishUser(users: decodeResponde)
-                
-            } catch {
-                print(error)
-            }
         } catch {
-            print("this data isn't valid")
+            print(error)
         }
     }
     
     func getPosts() async {
-        //criando url
-        guard let url = URL(string: "http://adaspace.local/posts") else
-        {
-            print("Nao ta funcionando")
-            return
-        }
-        //buscando dados da url em questao
         do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-
-            //decode that data
-            do {
-                let decodeResponde = try JSONDecoder().decode([PostModel].self, from: data)
-                publishPost(posts: decodeResponde)
+            let postsJSON = try await PostsService().getAllPosts()
+            publishPost(posts: postsJSON)
+            
+            
             } catch {
                 print(error)
-            }
-        } catch {
-            print("this data isn't valid")
         }
     }
     
@@ -74,7 +46,7 @@ class ViewModel: ObservableObject { //ObservableObject
             print(posts)
         }
     }
-
+    
     init(){}
     
 }

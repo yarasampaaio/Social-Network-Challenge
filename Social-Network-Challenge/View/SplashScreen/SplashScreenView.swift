@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct SplashScreenView: View {
-    @State private var animationText: Bool = false
     
     @State private var isActive: Bool = false
     
@@ -13,9 +12,6 @@ struct SplashScreenView: View {
             mySplash
             .ignoresSafeArea()
             .task {
-                withAnimation(.linear(duration: 2)) {
-                    animationText.toggle()
-                }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                     isActive.toggle()
                 }
@@ -26,20 +22,12 @@ struct SplashScreenView: View {
     
     var mySplash: some View{
         ZStack{
-            Color(uiColor: .darkGray)
             
-            Image("Perfil")
+            Image("Logo")
                 .resizable()
-                .opacity(animationText ? 1 : 0)
-                .shadow(
-                    color: Color(uiColor: .brown),
-                    radius: 4,
-                    x: 0,
-                    y: 4
-                )
                 .frame(
-                    width: SizesComponents.widthSecond,
-                    height: SizesComponents.heightScreen*0.5
+                    width: SizesComponents.widthFirst,
+                    height: SizesComponents.widthFirst
                 )
         }
     }

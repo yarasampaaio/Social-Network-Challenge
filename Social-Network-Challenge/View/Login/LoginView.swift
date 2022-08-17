@@ -27,6 +27,10 @@ struct LoginView: View {
             MyTabView()
         }else{
             VStack(spacing: 40){
+                Image("Logo").resizable().frame(
+                    width: SizesComponents.widthSecond,
+                    height: SizesComponents.widthSecond
+                )
                 loginAndPass
                 actionButtons
       

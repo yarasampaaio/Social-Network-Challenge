@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B99F4C7E28A3DAFD00076A02 /* Social_Network_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F4C7D28A3DAFD00076A02 /* Social_Network_ChallengeApp.swift */; };
-		B99F4C8028A3DAFD00076A02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F4C7F28A3DAFD00076A02 /* ContentView.swift */; };
 		B99F4C8228A3DAFE00076A02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B99F4C8128A3DAFE00076A02 /* Assets.xcassets */; };
 		B99F4C8528A3DAFE00076A02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B99F4C8428A3DAFE00076A02 /* Preview Assets.xcassets */; };
 		B99F4C8F28A3DAFE00076A02 /* Social_Network_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99F4C8E28A3DAFE00076A02 /* Social_Network_ChallengeTests.swift */; };
@@ -19,6 +18,11 @@
 		B9B108B028A52B41000C468A /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108AF28A52B41000C468A /* PostModel.swift */; };
 		B9B108B228A52CCD000C468A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B128A52CCD000C468A /* UserService.swift */; };
 		B9B108B428A52EC3000C468A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B328A52EC3000C468A /* ViewModel.swift */; };
+		B9B108B628AD09A8000C468A /* CreatUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B528AD09A8000C468A /* CreatUserService.swift */; };
+		B9B108B828AD0A66000C468A /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B728AD0A66000C468A /* SessionModel.swift */; };
+		B9B108BA28AD0D0C000C468A /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B928AD0D0C000C468A /* LoginService.swift */; };
+		B9B108BC28AD0D87000C468A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108BB28AD0D87000C468A /* LogoutService.swift */; };
+		B9B108BE28AD0EA6000C468A /* CreatPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108BD28AD0EA6000C468A /* CreatPostService.swift */; };
 		FE0264D228A7156C008DB945 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0264D128A7156C008DB945 /* LoginView.swift */; };
 		FE0264D528A7163A008DB945 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0264D428A7163A008DB945 /* MyTabView.swift */; };
 		FE0264D928A71FDB008DB945 /* MyUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0264D828A71FDB008DB945 /* MyUserModel.swift */; };
@@ -60,7 +64,6 @@
 /* Begin PBXFileReference section */
 		B99F4C7A28A3DAFD00076A02 /* Social-Network-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social-Network-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B99F4C7D28A3DAFD00076A02 /* Social_Network_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_Network_ChallengeApp.swift; sourceTree = "<group>"; };
-		B99F4C7F28A3DAFD00076A02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B99F4C8128A3DAFE00076A02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B99F4C8428A3DAFE00076A02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B99F4C8A28A3DAFE00076A02 /* Social-Network-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Social-Network-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +76,11 @@
 		B9B108AF28A52B41000C468A /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		B9B108B128A52CCD000C468A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		B9B108B328A52EC3000C468A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		B9B108B528AD09A8000C468A /* CreatUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatUserService.swift; sourceTree = "<group>"; };
+		B9B108B728AD0A66000C468A /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
+		B9B108B928AD0D0C000C468A /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		B9B108BB28AD0D87000C468A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
+		B9B108BD28AD0EA6000C468A /* CreatPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatPostService.swift; sourceTree = "<group>"; };
 		FE0264D128A7156C008DB945 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FE0264D428A7163A008DB945 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		FE0264D628A71898008DB945 /* Social-Network-Challenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social-Network-Challenge.entitlements"; sourceTree = "<group>"; };
@@ -152,7 +160,6 @@
 				B9B108A928A527D8000C468A /* Service */,
 				FE84E29528A5FA14007114C0 /* Components */,
 				B99F4C7D28A3DAFD00076A02 /* Social_Network_ChallengeApp.swift */,
-				B99F4C7F28A3DAFD00076A02 /* ContentView.swift */,
 				B99F4C8128A3DAFE00076A02 /* Assets.xcassets */,
 				B99F4C8328A3DAFE00076A02 /* Preview Content */,
 				FE0264DA28A72766008DB945 /* Launch Screen.storyboard */,
@@ -191,6 +198,7 @@
 				B9B108AB28A52836000C468A /* UserModel.swift */,
 				B9B108AF28A52B41000C468A /* PostModel.swift */,
 				FE0264D828A71FDB008DB945 /* MyUserModel.swift */,
+				B9B108B728AD0A66000C468A /* SessionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -220,6 +228,10 @@
 			children = (
 				B9B108AD28A529FF000C468A /* PostService.swift */,
 				B9B108B128A52CCD000C468A /* UserService.swift */,
+				B9B108B528AD09A8000C468A /* CreatUserService.swift */,
+				B9B108B928AD0D0C000C468A /* LoginService.swift */,
+				B9B108BB28AD0D87000C468A /* LogoutService.swift */,
+				B9B108BD28AD0EA6000C468A /* CreatPostService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -432,7 +444,7 @@
 			files = (
 				FE0264DD28A72840008DB945 /* SplashScreenView.swift in Sources */,
 				FE84E28728A5BE10007114C0 /* ProfileView.swift in Sources */,
-				B99F4C8028A3DAFD00076A02 /* ContentView.swift in Sources */,
+				B9B108BE28AD0EA6000C468A /* CreatPostService.swift in Sources */,
 				FE84E28C28A5DC42007114C0 /* NameView.swift in Sources */,
 				FE84E29428A5F8C2007114C0 /* ItemNavigationListComponent.swift in Sources */,
 				FE84E29E28A6235E007114C0 /* AddPostView.swift in Sources */,
@@ -443,6 +455,7 @@
 				B9B108AE28A529FF000C468A /* PostService.swift in Sources */,
 				FEBC7C2F28ABDFA6004479D1 /* RegisterView.swift in Sources */,
 				FE84E29C28A620AD007114C0 /* PostsComponents.swift in Sources */,
+				B9B108BC28AD0D87000C468A /* LogoutService.swift in Sources */,
 				FE84E29A28A608C1007114C0 /* SizesComponent.swift in Sources */,
 				FE0264D528A7163A008DB945 /* MyTabView.swift in Sources */,
 				FEAB5C5028A6C71E002DCB3D /* FriendsView.swift in Sources */,
@@ -450,11 +463,14 @@
 				FEAB5C5428A6CBFC002DCB3D /* FriendComponent.swift in Sources */,
 				FE0264D228A7156C008DB945 /* LoginView.swift in Sources */,
 				FE0264D928A71FDB008DB945 /* MyUserModel.swift in Sources */,
+				B9B108B828AD0A66000C468A /* SessionModel.swift in Sources */,
 				FEAB5C5928A6DDCC002DCB3D /* PasswordView.swift in Sources */,
 				B9B108B428A52EC3000C468A /* ViewModel.swift in Sources */,
 				FE84E2A028A63B84007114C0 /* ImagePicker.swift in Sources */,
 				FE84E29828A60714007114C0 /* ExploreView.swift in Sources */,
+				B9B108B628AD09A8000C468A /* CreatUserService.swift in Sources */,
 				FE84E28E28A5DC5D007114C0 /* EmailView.swift in Sources */,
+				B9B108BA28AD0D0C000C468A /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

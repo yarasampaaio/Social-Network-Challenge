@@ -77,7 +77,7 @@ private struct ItensProfile{
     
     static let password: ItemNavigationListComponent = ItemNavigationListComponent(
         route: AnyView(PasswordView()),
-        systemName: "person.badge.key.fill",
+        systemName: "lock.rectangle.fill",
         title: "Senha"
     )
     
