@@ -12,12 +12,11 @@ struct LoginView: View {
     
     @State private var isLoggedIn = false
     
-    @State private var name: String = ""
+    @State private var email: String = ""
     @State private var password: String = ""
     
     @State private var isSecured = true
     
-    @State private var showRegister = false
     
     @State private var go = false
     
@@ -26,35 +25,30 @@ struct LoginView: View {
         if go{
             MyTabView()
         }else{
-            VStack(spacing: 40){
-                Image("Logo").resizable().frame(
-                    width: SizesComponents.widthSecond,
-                    height: SizesComponents.widthSecond
-                )
-                loginAndPass
-                actionButtons
-      
+            NavigationView {
+                VStack(spacing: 40){
+                    Image("Logo").resizable().frame(
+                        width: SizesComponents.widthSecond,
+                        height: SizesComponents.widthSecond
+                    )
+                    loginAndPass
+                    actionButtons
+                    
+                }
+                .ignoresSafeArea()
+                
             }
-            .sheet(isPresented: $showRegister){
-                RegisterView()
-            }
-            .ignoresSafeArea()
-            .navigationTitle("")
-            .navigationBarHidden(true)
-            .navigationBarBackButtonHidden(true)
         }
-        
-        
         
     }
     
     var loginAndPass: some View{
         VStack {
             HStack(alignment: .center) {
-                Text("Nome:")
+                Text("E-mail:")
                     .font(.callout)
                     .bold()
-                TextField("Insira seu Nome...", text: $name)
+                TextField("Insira seu e-mail...", text: $email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
             }.frame(width: SizesComponents.widthFirst)
             
@@ -80,7 +74,7 @@ struct LoginView: View {
                 
             }.frame(width: SizesComponents.widthFirst)
         }
-
+        
     }
     
     var actionButtons: some View{
@@ -106,20 +100,25 @@ struct LoginView: View {
             }
             
             
+            
             HStack{
                 Text("ou")
-                Button("Cadastre-se"){
-                    self.showRegister.toggle()
+                NavigationLink {
+                    RegisterView()
+                }label:{
+                    Text("cadastre-se").foregroundColor(.accentColor)
+                    
                 }
-                
             }.frame(
                 width: SizesComponents.widthSecond,
                 alignment: .trailing
             )
+            
         }
     }
-    
 }
+
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
