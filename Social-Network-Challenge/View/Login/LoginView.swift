@@ -81,6 +81,11 @@ struct LoginView: View {
         VStack {
             
             Button(action: {
+                let loginService = LoginService()
+                Task {
+                    guard let session = await loginService.login(username: email, password: password) else {return}
+                    print(session.token)
+                }
                 self.go.toggle()
             }) {
                 HStack {

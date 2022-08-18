@@ -23,6 +23,7 @@
 		B9B108BA28AD0D0C000C468A /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B928AD0D0C000C468A /* LoginService.swift */; };
 		B9B108BC28AD0D87000C468A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108BB28AD0D87000C468A /* LogoutService.swift */; };
 		B9B108BE28AD0EA6000C468A /* CreatPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108BD28AD0EA6000C468A /* CreatPostService.swift */; };
+		B9E97B1B28AE79E500FC6614 /* CreatUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E97B1A28AE79E500FC6614 /* CreatUserModel.swift */; };
 		FE0264D228A7156C008DB945 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0264D128A7156C008DB945 /* LoginView.swift */; };
 		FE0264D528A7163A008DB945 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0264D428A7163A008DB945 /* MyTabView.swift */; };
 		FE0264D928A71FDB008DB945 /* MyUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0264D828A71FDB008DB945 /* MyUserModel.swift */; };
@@ -81,6 +82,7 @@
 		B9B108B928AD0D0C000C468A /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		B9B108BB28AD0D87000C468A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
 		B9B108BD28AD0EA6000C468A /* CreatPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatPostService.swift; sourceTree = "<group>"; };
+		B9E97B1A28AE79E500FC6614 /* CreatUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatUserModel.swift; sourceTree = "<group>"; };
 		FE0264D128A7156C008DB945 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FE0264D428A7163A008DB945 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
 		FE0264D628A71898008DB945 /* Social-Network-Challenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Social-Network-Challenge.entitlements"; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				B9B108AF28A52B41000C468A /* PostModel.swift */,
 				FE0264D828A71FDB008DB945 /* MyUserModel.swift */,
 				B9B108B728AD0A66000C468A /* SessionModel.swift */,
+				B9E97B1A28AE79E500FC6614 /* CreatUserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9E97B1B28AE79E500FC6614 /* CreatUserModel.swift in Sources */,
 				FE0264DD28A72840008DB945 /* SplashScreenView.swift in Sources */,
 				FE84E28728A5BE10007114C0 /* ProfileView.swift in Sources */,
 				B9B108BE28AD0EA6000C468A /* CreatPostService.swift in Sources */,
@@ -632,7 +636,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Social-Network-Challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = DVX5N2U74F;
+				DEVELOPMENT_TEAM = 2DU8KC3W93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Social-Network-Challenge/Info.plist";
@@ -666,7 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Social-Network-Challenge/Preview Content\"";
-				DEVELOPMENT_TEAM = DVX5N2U74F;
+				DEVELOPMENT_TEAM = 2DU8KC3W93;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Social-Network-Challenge/Info.plist";

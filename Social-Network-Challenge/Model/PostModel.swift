@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// esse é o modelo de post proposto na API, ou seja, todo post terao esse dados, menos a media que e optional
 struct PostModel: Codable {
     var id: String
     var content: String
