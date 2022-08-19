@@ -86,7 +86,7 @@ struct LoginView: View {
                     guard let session = await loginService.login(username: email, password: password) else {return}
                     print(session.token)
                 }
-                self.go.toggle()
+                self.go = !email.isEmpty && !password.isEmpty
             }) {
                 HStack {
                     Image(systemName: "person.fill")

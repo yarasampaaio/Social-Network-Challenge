@@ -17,8 +17,7 @@ struct RegisterView: View {
     @State private var password: String = ""
     @State private var name: String = ""
     @State private var isSecured = true
-    @State private var go = false
-
+    
     var body: some View {
         VStack {
             avatarProfile
@@ -27,7 +26,7 @@ struct RegisterView: View {
         .navigationTitle("Cadastro")
         .navigationBarTitleDisplayMode(NavigationBarItem.TitleDisplayMode.inline)
         .toolbar {
-            if isDone {
+            if !email.isEmpty && !password.isEmpty && !name.isEmpty{
                 
                 Button (action:{
                     dismiss()
@@ -92,7 +91,7 @@ struct RegisterView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
                 
-               
+                
                 Button(action: {
                     isSecured.toggle()
                 }) {
@@ -101,14 +100,21 @@ struct RegisterView: View {
                 }
                 
             }.frame(width: SizesComponents.widthFirst)
-        Button(action: {
-                let creatUserService = CreatUserService()
-                Task {
-                    let session = await creatUserService.createUser(name: name, email: email, password: password)
-                    print(session?.token)
+            Button(action: {
+                
+                isDone = !email.isEmpty && !password.isEmpty && !name.isEmpty
+                
+                if isDone{
+                    let creatUserService = CreatUserService()
+                    Task {
+                        let session = await creatUserService.createUser(name: name, email: email, password: password)
+                        
+                    }
+                    dismiss()
+                    
                 }
-                self.go.toggle()
             }) {
+                
                 HStack {
                     Image(systemName: "person.fill")
                         .font(.system(size: 20))
@@ -123,6 +129,7 @@ struct RegisterView: View {
                 .foregroundColor(.white)
                 .cornerRadius(10)
                 .padding(.horizontal)
+                
             }
         }
     }
