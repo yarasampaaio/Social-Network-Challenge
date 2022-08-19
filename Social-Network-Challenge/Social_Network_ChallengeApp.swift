@@ -11,7 +11,9 @@ import SwiftUI
 struct Social_Network_ChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreenView()
+            //MyTabView()
+            //ContentView()
         }
     }
 }
