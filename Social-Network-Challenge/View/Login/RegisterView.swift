@@ -107,7 +107,7 @@ struct RegisterView: View {
                 if isDone{
                     let creatUserService = CreatUserService()
                     Task {
-                        let session = await creatUserService.createUser(name: name, email: email, password: password)
+                        await creatUserService.createUser(name: name, email: email, password: password)
                         
                     }
                     dismiss()
