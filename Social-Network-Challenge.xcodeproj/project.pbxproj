@@ -21,8 +21,6 @@
 		B9B108B628AD09A8000C468A /* CreatUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B528AD09A8000C468A /* CreatUserService.swift */; };
 		B9B108B828AD0A66000C468A /* SessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B728AD0A66000C468A /* SessionModel.swift */; };
 		B9B108BA28AD0D0C000C468A /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108B928AD0D0C000C468A /* LoginService.swift */; };
-		B9B108BC28AD0D87000C468A /* LogoutService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108BB28AD0D87000C468A /* LogoutService.swift */; };
-		B9B108BE28AD0EA6000C468A /* CreatPostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B108BD28AD0EA6000C468A /* CreatPostService.swift */; };
 		B9E97B1B28AE79E500FC6614 /* CreatUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9E97B1A28AE79E500FC6614 /* CreatUserModel.swift */; };
 		FE0264D228A7156C008DB945 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0264D128A7156C008DB945 /* LoginView.swift */; };
 		FE0264D528A7163A008DB945 /* MyTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0264D428A7163A008DB945 /* MyTabView.swift */; };
@@ -80,8 +78,6 @@
 		B9B108B528AD09A8000C468A /* CreatUserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatUserService.swift; sourceTree = "<group>"; };
 		B9B108B728AD0A66000C468A /* SessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionModel.swift; sourceTree = "<group>"; };
 		B9B108B928AD0D0C000C468A /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		B9B108BB28AD0D87000C468A /* LogoutService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutService.swift; sourceTree = "<group>"; };
-		B9B108BD28AD0EA6000C468A /* CreatPostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatPostService.swift; sourceTree = "<group>"; };
 		B9E97B1A28AE79E500FC6614 /* CreatUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatUserModel.swift; sourceTree = "<group>"; };
 		FE0264D128A7156C008DB945 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FE0264D428A7163A008DB945 /* MyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabView.swift; sourceTree = "<group>"; };
@@ -233,8 +229,6 @@
 				B9B108B128A52CCD000C468A /* UserService.swift */,
 				B9B108B528AD09A8000C468A /* CreatUserService.swift */,
 				B9B108B928AD0D0C000C468A /* LoginService.swift */,
-				B9B108BB28AD0D87000C468A /* LogoutService.swift */,
-				B9B108BD28AD0EA6000C468A /* CreatPostService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -448,7 +442,6 @@
 				B9E97B1B28AE79E500FC6614 /* CreatUserModel.swift in Sources */,
 				FE0264DD28A72840008DB945 /* SplashScreenView.swift in Sources */,
 				FE84E28728A5BE10007114C0 /* ProfileView.swift in Sources */,
-				B9B108BE28AD0EA6000C468A /* CreatPostService.swift in Sources */,
 				FE84E28C28A5DC42007114C0 /* NameView.swift in Sources */,
 				FE84E29428A5F8C2007114C0 /* ItemNavigationListComponent.swift in Sources */,
 				FE84E29E28A6235E007114C0 /* AddPostView.swift in Sources */,
@@ -459,7 +452,6 @@
 				B9B108AE28A529FF000C468A /* PostService.swift in Sources */,
 				FEBC7C2F28ABDFA6004479D1 /* RegisterView.swift in Sources */,
 				FE84E29C28A620AD007114C0 /* PostsComponents.swift in Sources */,
-				B9B108BC28AD0D87000C468A /* LogoutService.swift in Sources */,
 				FE84E29A28A608C1007114C0 /* SizesComponent.swift in Sources */,
 				FE0264D528A7163A008DB945 /* MyTabView.swift in Sources */,
 				FEAB5C5028A6C71E002DCB3D /* FriendsView.swift in Sources */,

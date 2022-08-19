@@ -13,7 +13,7 @@ class UserService {
         do {
 // nessa let eu vou guardar esses dados que foram pegos da API
             let (userRequest, _) = try await URLSession.shared.data(from: URL(string: "http://adaspace.local/users")!)
-// transformando os dados da API no modelo JSON pelo decode, obedecendo o padrao UserModel, a partir da let anterior
+// transformando os dados da API no modelo JSON pelo decode, para swift obedecendo o padrao UserModel, a partir da let anterior
             let jsonResult = try JSONDecoder().decode([UserModel].self, from: userRequest)
             return jsonResult
         } catch {
